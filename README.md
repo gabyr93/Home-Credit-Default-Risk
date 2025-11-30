@@ -7,7 +7,6 @@ The challenge is to identify which applicants are likely to default **without** 
 
 Our objective in this project was to predict each applicant’s probability of default so the company can make smarter, lower-risk lending decisions while still expanding access to credit.
 
-
 ## 2. Our Group’s Solution
 
 As a team, we built an end-to-end modeling pipeline using multiple data sources tied to each applicant:
@@ -26,8 +25,6 @@ From these tables we engineered aggregated behavioral features, such as:
 We compared several models, including a **baseline logistic regression**, **regularized linear models**, and **tree-based approaches**.  
 Models were evaluated using cross-validation and holdout performance (e.g., ROC–AUC and related metrics), and we selected the model that offered the best balance of accuracy and stability for risk scoring.
 
-
-
 ## 3. My Individual Contributions
 
 My personal work on the project included:
@@ -39,9 +36,16 @@ My personal work on the project included:
 
 My individual notebooks are in the `/portfolio` folder of this repo.
 
+## 4. Data Source & Reproducibility
 
+This project is based on the **Kaggle Home Credit Default Risk** competition.  
+To fully reproduce the analysis, download the original CSV files (such as `application_train.csv` and `bureau.csv`) from the competition’s data page and place them in your project (for example in a `data/` folder):
 
-## 4. Business Value
+[https://www.kaggle.com/competitions/home-credit-default-risk/data]
+
+The notebooks assume that these files are available locally and will load them using relative paths.
+
+## 5. Business Value
 
 The final modeling pipeline helps Home Credit:
 
@@ -51,9 +55,7 @@ The final modeling pipeline helps Home Credit:
 
 Used in production, these risk scores would support more consistent approval decisions, healthier loan portfolios, and more inclusive access to credit.
 
-
-
-## 5. Difficulties We Encountered
+## 6. Difficulties We Encountered
 
 Some of the main challenges our group faced were:
 
@@ -64,9 +66,7 @@ Some of the main challenges our group faced were:
 
 We iterated on our data processing pipeline several times to keep it reproducible and avoid leakage.
 
-
-
-## 6. What I Learned
+## 7. What I Learned
 
 Through this project I strengthened my ability to:
 
@@ -74,12 +74,3 @@ Through this project I strengthened my ability to:
 - Handle missing data and class imbalance in a principled way,  
 - Compare baseline and regularized models while guarding against leakage, and  
 - Translate model outputs into business actions and talking points for stakeholders.
-
-
-
-## 7. Notebooks Included (Individual Work)
-
-- **`EDA_HomeCredit.qmd`** – exploratory data analysis, missingness, imbalance, and key data patterns.  
-- **`Baseline_Model.qmd`** – baseline logistic regression model setup, training, and evaluation.  
-- **`Lasso.rmarkdown`** – LASSO regression modeling and comparison to the baseline.
-
